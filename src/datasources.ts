@@ -1,17 +1,11 @@
 // Use our automatically generated Book and AddBookMutationResponse types
 // for type safety in our data source class
 import { Book } from "./__generated__/resolvers-types";
+import { readFileSync } from "fs";
+let rawData = readFileSync('./books.json', { encoding: 'utf-8' });
+let jsonData = JSON.parse(rawData);
 
-const BooksDB: Omit<Required<Book>, "__typename">[] = [
-  {
-    title: "The Awakening",
-    author: "Kate Chopin",
-  },
-  {
-    title: "City of Glass",
-    author: "Paul Auster",
-  },
-];
+const BooksDB: Omit<Required<Book>, "__typename">[] = jsonData;
 
 export class BooksDataSource {
   getBooks(): Book[] {

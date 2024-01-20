@@ -30,6 +30,7 @@ RUN npm ci --production
 
 COPY --from=builder /usr/src/app/dist ./dist
 COPY --from=builder /usr/src/app/*.graphql ./
+COPY --from=builder /usr/src/app/books.json ./
 
 EXPOSE 4000
 CMD [ "node", "dist/index.js" ]
