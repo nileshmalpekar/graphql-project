@@ -21,19 +21,16 @@ done
 
 IMG_NAME="${PROJECT_NAME}:${TARGET}_${PROJECT_VERSION}"
 
+docker build \
+    -t ${IMG_NAME} \
+    --target ${TARGET} \
+    -f Dockerfile \
+    .
+
 if [ $TARGET == "dev" ]
 then
     docker run \
-        -it \
-        --rm \
-        -p 4000:4000 \
         -v $(PWD):/usr/src/app \
         ${IMG_NAME} \
-        npm ci && npm run start
-else
-    docker run \
-        -it \
-        --rm \
-        -p 4000:4000 \
-        $IMG_NAME
+        npm ci
 fi
