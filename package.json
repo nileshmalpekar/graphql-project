@@ -14,9 +14,9 @@
     "@apollo/server": "^4.10.0",
     "graphql": "^16.8.1"
   },
-  "description": "",
   "devDependencies": {
     "@types/node": "^20.11.5",
     "typescript": "^5.3.3"
-  }
+  },
+  "description": ""
 }
