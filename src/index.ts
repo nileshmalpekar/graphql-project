@@ -4,9 +4,6 @@ import { BooksDataSource } from "./datasources.js";
 import resolvers from "./resolvers/index.js";
 import { readFileSync } from "fs";
 
-// Note: this uses a path relative to the project's
-// root directory, which is the current working directory
-// if the server is executed using `npm run`.
 const typeDefs = readFileSync('./schema.graphql', { encoding: 'utf-8' });
 
 export interface MyContext {

@@ -3,6 +3,6 @@ docker run -it \
     -w /app node:latest \
     bash -c 'npm init --yes && \
         npm pkg set type="module" && \
-        npm i @apollo/server graphql graphql-scalars && \
+        npm i @apollo/server graphql && \
         npm i --save-dev typescript @types/node && \
         npm i -D @graphql-codegen/cli @graphql-codegen/typescript @graphql-codegen/typescript-resolvers'
