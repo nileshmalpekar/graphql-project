@@ -1,10 +1,12 @@
 [
     {
+      "id": "1",
       "title": "The Awakening 1",
       "author": "Kate Chopin 2",
       "ts": 28202082
     },
     {
+      "id": "2",
       "title": "City of Glass 1",
       "author": "Paul Auster 2",
       "ts": 28302082

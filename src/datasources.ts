@@ -13,4 +13,8 @@ export class BooksDataSource {
     return BooksDB;
   }
 
+  getBook(id: string): Book {
+    return BooksDB.find((book) => book.id === id)
+  }
+
 }

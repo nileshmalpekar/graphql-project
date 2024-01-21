@@ -2,8 +2,9 @@ scalar Timestamp
 
 # This "Book" type defines the queryable fields for every book in our data source.
 type Book {
-  title: String
-  author: String
+  id: ID!
+  title: String!
+  author: String!
   ts: Timestamp
 }
 
@@ -12,4 +13,6 @@ type Book {
 # case, the "books" query returns an array of zero or more Books (defined above).
 type Query {
   books: [Book]
+
+  book(id: ID): Book
 }
