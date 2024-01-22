@@ -1,4 +1,4 @@
-import { QueryResolvers } from "__generated__/resolvers-types";
+import { BookResolvers, QueryResolvers } from "__generated__/resolvers-types";
 
 // Use the generated `QueryResolvers` type to type check our queries!
 const queries: QueryResolvers = {
@@ -11,6 +11,15 @@ const queries: QueryResolvers = {
   book: async (_, args, { dataSources }) => {
     return dataSources.booksAPI.getBook(args.id);
   },
+
+  authors: async (_, __, { dataSources }) => {
+    return dataSources.booksAPI.getAuthors();
+  },
+
+  author: async (_, args, { dataSources }) => {
+    return dataSources.booksAPI.getAuthor(args.id);
+  },
+
 };
 
 export default queries;

@@ -1,5 +1,8 @@
 import { Resolvers } from "../__generated__/resolvers-types";
 import Query from "./queries.js";
+import Book from "./books.js";
+import Author from "./authors.js";
+
 import { GraphQLScalarType, Kind } from 'graphql';
 
 const TimpestampScalar = new GraphQLScalarType({
@@ -43,7 +46,9 @@ const TimpestampScalar = new GraphQLScalarType({
 // in a single file.
 const resolvers: Resolvers = {
     Timestamp: TimpestampScalar, 
-    Query 
+    Query,
+    Book,
+    Author
 };
 
 export default resolvers;

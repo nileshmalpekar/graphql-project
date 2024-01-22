@@ -1,14 +1,26 @@
-[
+{
+  "books": [
     {
       "id": "1",
       "title": "The Awakening 1",
-      "author": "Kate Chopin 2",
+      "author_id": "1",
       "ts": 28202082
     },
     {
       "id": "2",
       "title": "City of Glass 1",
-      "author": "Paul Auster 2",
+      "author_id": "2",
       "ts": 28302082
     }
-]
+  ],
+  "authors": [
+    {
+      "id": "1",
+      "name": "Kate Chopin 2"
+    },
+    {
+      "id": "2",
+      "name": "Paul Auster 2"
+    }
+  ]
+}
